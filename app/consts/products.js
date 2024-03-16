@@ -28,7 +28,7 @@ export const products = [
   },
   {
     name: "Verano",
-    description: "Lonas, bolsillos para reposeras, etc.",
+    description: "Lonas, bolsillos para reposeras, etc..",
     href: "#",
     icon: SunIcon,
   },
