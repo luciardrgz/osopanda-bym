@@ -10,13 +10,14 @@ const LastProductCard: React.FC<Props> = ({ data }) => {
   return (
     <>
       {data.map((product, idx) => (
-        <div className="container" key={idx}>
-          <div className="card relative mx-auto w-[320px] h-[450px] bg-darkgreen rounded-md overflow-hidden">
+        <div key={idx}>
+          <div className="card relative mx-auto w-[320px] h-[450px] max-md:mb-16 max-md:max-w-[38vh] bg-[#8fffc7] hover:bg-darkgreen transition duration-500 rounded-md overflow-hidden">
             <div className="imgBx">
               <img src={urlFor(product.productImage).url()} />
             </div>
+
             <div className="contentBx flex flex-col gap-2 justify-center">
-              <h2>{product.productName}</h2>
+              <h2 className="text-darkgreen">{product.productName}</h2>
               <div className="color">
                 <h3 className="text-[#fff] font-light text-[14px] uppercase tracking-[2px] mr-[10px]">
                   Estampados:
@@ -25,13 +26,14 @@ const LastProductCard: React.FC<Props> = ({ data }) => {
                 <span className="w-[20px] h-[20px] bg-[#9bdc28] rounded-[50%] mx-[5px] my-[0] cursor-pointer"></span>
                 <span className="w-[20px] h-[20px] bg-[#ff0] rounded-[50%] mx-[5px] my-[0] cursor-pointer"></span>
               </div>
+
               <a
                 href={`/products/${product.productSlug}`}
-                className="inline-block px-[20px] py-[10px] bg-[#fff] rounded-[4px] no-underline font-semibold text-[#111] opacity-0 translate-y-[50px] [transition:0.5s] mt-0
-              hover:opacity-100 hover:translate-y-0 hover:delay-75 w-1/2 mx-auto"
-              >
+                className="inline-block mx-12 py-2 bg-white hover:bg-green-300 hover:text-darkgreen rounded-md no-underline font-semibold text-black transition-opacity transform translate-y-0 hover:translate-y-0 hover:opacity-100 opacity-0"
+              > 
                 Ver
               </a>
+
             </div>
           </div>
         </div>

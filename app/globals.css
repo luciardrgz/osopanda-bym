@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #8fffc7;
+  background: #eeeeee;
 }
 
 @layer base {
@@ -47,19 +47,6 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
-
-main {
-  position: relative;
-  width: calc(min(90rem, 90%));
-  margin: 0 auto;
-  padding-block: min(20vh, 3rem);
-}
-
-.hero {
-  display: grid;
-  padding: 0;
-  position: relative;
 }
 
 .bg {
@@ -109,17 +96,13 @@ main {
   border: 0.125rem solid #005baa;
   color: #005baa;
 }
-.swiper {
-  width: 100%;
-  padding-top: 3.125rem;
-}
+
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
   background: #ffffff !important;
 }
 .swiper-pagination {
-  bottom: 2.5rem !important;
-  left: 4rem !important;
+  bottom: 1rem !important;
 }
 
 .swiper-slide {
@@ -182,9 +165,8 @@ main {
   background-color: #269aff;
 }
 
-
-.card:before{
-  content: '';
+.card:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -195,20 +177,20 @@ main {
   transition: 0.5s ease-in-out;
 }
 
-.card:hover:before{
+.card:hover:before {
   clip-path: circle(300px at 80% -20%);
 }
 
-.card:after{
-  content: 'oSoPanda';
+.card:after {
+  content: "oSoPanda";
   position: absolute;
   top: 80%;
-  font-size:4rem;
+  font-size: 4rem;
   font-weight: 800;
-  color: rgba(23, 46, 36, 0.05)
+  color: rgba(23, 46, 36, 0.05);
 }
 
-.card .imgBx{
+.card .imgBx {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -218,12 +200,12 @@ main {
   transition: 0.5s;
 }
 
-.card:hover .imgBx{
+.card:hover .imgBx {
   top: 20%;
   transform: translateY(0%);
 }
 
-.card .imgBx img{
+.card .imgBx img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -232,7 +214,7 @@ main {
   width: 270px;
 }
 
-.card .contentBx{
+.card .contentBx {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -242,11 +224,11 @@ main {
   z-index: 10;
 }
 
-.card:hover .contentBx{
+.card:hover .contentBx {
   height: 210px;
 }
 
-.card .contentBx h2{
+.card .contentBx h2 {
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
@@ -259,25 +241,68 @@ main {
   justify-content: center;
   align-items: center;
   padding: 8px 20px;
-  transition: 0.5s;opacity: 0;
+  transition: 0.5s;
+  opacity: 0;
   visibility: hidden;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.card:hover .contentBx .color{
+.card:hover .contentBx .color {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-.card .contentBx a{
+.card .contentBx a {
   transform: translateY(50px);
   transition: 0.5s;
 }
 
-.card:hover .contentBx a{
+.card:hover .contentBx a {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
+}
+
+.card__name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.card-prices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card__price {
+  display: block;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 0.5rem 1rem #d1d9e6;
+}
+.product-card:hover .card__name {
+  left: 0;
+}
+
+.product-card:hover .card-prices {
+  margin-left: 3.5rem;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

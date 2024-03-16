@@ -1,5 +1,4 @@
 import React from "react";
-import { urlFor } from "../lib/sanity";
 
 const SwiperCard = ({
   title,
@@ -14,30 +13,28 @@ const SwiperCard = ({
 }) => {
   return (
     <div
-      className="relative swiper-slide w-[18.75rem] h-[28.125rem] flex flex-col justify-end items-start"
+      className="relative swiper-slide w-[18.75rem] h-[28.125rem] max-sm:w-full max-sm:h-full flex flex-col justify-end items-start"
       style={{
-        backgroundImage: `linear-gradient(to top, #0f2027, #203a4300, #2c536400), url(${urlFor(
-          backgroundImageUrl
-        ).url()})`,
+        backgroundImage: `url(${backgroundImageUrl})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "80% 50%",
+        backgroundPosition: "50% 50%",
         backgroundSize: "cover",
+        borderRadius: "1rem",
       }}
     >
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#0f2027] via-[#203a4300] to-[#2c536400] flex flex-col items-start">
-        <h2 className="text-white text-xl uppercase font-extrabold mb-[0.625rem] pl-[1.563rem]">
-          {title}
-        </h2>
-        <p className="text-white text-sm font-medium pl-[1.563rem] overflow-hidden">
-          {paragraph}
-        </p>
-        <a
-          href={url}
-          className="ml-[1.563rem] mr-[1.563rem] my-5 px-[1.875rem] py-[0.438em] text-[0.9rem] hover:text-white hover:bg-darkgreen"
-          target="_blank"
-        >
-          Más info!
-        </a>
+      <div className="absolute bottom-0 left-0 w-full h-1/4 rounded-b-[1rem] bg-gradient-to-t from-[#a6eacb] via-[#a6eacb] to-[#a6eacb60] flex flex-col items-start">
+        <div className="mt-4 text-center">
+          <a
+            href={url}
+            className="ml-[1.563rem] mr-[1.563rem]  px-[1.875rem] py-[0.438em] text-[0.9rem] hover:text-white hover:bg-darkgreen"
+            target="_blank"
+          >
+            {title}
+          </a>
+          <p className="text-darkgreen mt-2 text-sm font-medium pl-[1.563rem] overflow-hidden">
+            {paragraph}
+          </p>
+        </div>
       </div>
     </div>
   );

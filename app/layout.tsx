@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className="flex flex-col gap-10">
+        <main className="flex flex-col mx-8 gap-10 mb-24">
           {children}
         </main>
         <img

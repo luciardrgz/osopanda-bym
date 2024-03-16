@@ -1,8 +1,7 @@
 import React from "react";
-import { Dialog} from "@headlessui/react";
+import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import MobileNavbarPopover from "./MobileNavbarPopover";
-
 
 interface MobileNavbarProps {
   mobileMenuOpen: boolean;
@@ -26,14 +25,14 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">osoPanda</span>
-            <img className="h-8 w-auto" src="logo.png" alt="" />
+            <img className="h-8 w-auto" src="/logo.png" alt="" />
           </a>
           <button
             type="button"
             className="-m-2.5 rounded-md p-2.5 text-darkgreen"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <span className="sr-only">Close menu</span>
+            <span className="sr-only">Cerrar</span>
             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
@@ -42,32 +41,23 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
           <div className="-my-6 divide-y divide-gray-500/10">
             <div className="space-y-2 py-6">
               <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                href="/"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
               >
                 Inicio
               </a>
               <MobileNavbarPopover />
               <a
                 href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
               >
                 Preguntas frecuentes
               </a>
               <a
                 href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
               >
                 Contacto
-              </a>
-            </div>
-
-            <div className="py-6">
-              <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-blue-800"
-              >
-                Log In
               </a>
             </div>
           </div>

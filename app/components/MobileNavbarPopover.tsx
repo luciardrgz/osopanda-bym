@@ -10,7 +10,7 @@ const MobileNavbarPopover = () => {
     <Disclosure as="div" className="-mx-3">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-darkgreen">
+                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white">
                       Creaciones
                       <ChevronDownIcon
                         className={cn(
@@ -26,7 +26,7 @@ const MobileNavbarPopover = () => {
                           key={item.name}
                           as="a"
                           href={item.href}
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-blue-800"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
                         >
                           {item.name}
                         </Disclosure.Button>

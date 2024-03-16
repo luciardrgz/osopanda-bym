@@ -4,6 +4,7 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import SwiperCard from "../components/SwiperCard";
 import { simpleProductCard } from "../lib/interface";
+import { urlFor } from "../lib/sanity";
 
 interface Props {
   data: simpleProductCard[];
@@ -28,7 +29,7 @@ const Hero: React.FC<Props> = ({ data }) => {
       mousewheel: {
         thresholdDelta: 70,
       },
-      loop: true,
+      loop: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -55,10 +56,11 @@ const Hero: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <div className="hero h-[87vh] -mt-10 grid-cols-2 w-full bg-[#d7f8e7] rounded-md">
-      <div className="p-6">
+    <div className="hero h-[87vh] mt-2 flex justify-center items-center">
+
+      <div className="p-6 h-[60vh] bg-[#d7f8e7] rounded-md max-md:mx-auto">
         <span className="text-lg uppercase text-darkgreen">Esto es</span>
-        <h1 className="title-gradient text-7xl font-extrabold tracking-tighter">
+        <h1 className="title-gradient text-7xl max-sm:text-5xl font-extrabold tracking-tighter">
           oSoPanda
         </h1>
         <hr className="block bg-darkgreen h-[0.25rem] w-[6.25rem] border-none mt-[1.125rem] mb-[1.875rem]" />
@@ -68,9 +70,9 @@ const Hero: React.FC<Props> = ({ data }) => {
           creación se refleja la pasión por el diseño y la artesanía. ¡Animate a
           ser parte de la familia oSoPanda!
         </p>
-        <a href="#">download app</a>
       </div>
-      <div className="swiper my-10">
+
+      <div className="swiper w-full h-[80vh] max-md:mx-auto">
         <div className="swiper-wrapper">
           {data.map((product, index) => (
             <SwiperCard
@@ -78,7 +80,7 @@ const Hero: React.FC<Props> = ({ data }) => {
               title={product.productName}
               paragraph={product.productSmallDescription}
               url="https://en.wikipedia.org/wiki/Jellyfish"
-              backgroundImageUrl={product.productImage} // Nueva prop para la URL de la imagen de fondo
+              backgroundImageUrl={urlFor(product.productImage).url()}
             />
           ))}
         </div>
