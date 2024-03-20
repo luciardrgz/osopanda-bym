@@ -2,6 +2,7 @@ import React from "react";
 import ProductCard from "../components/ProductCard";
 import { client, urlFor } from "../lib/sanity";
 import { simpleProductCard } from "../lib/interface";
+import StitchedTitle from "../components/StitchedTitle";
 
 export const revalidate = 30;
 
@@ -22,17 +23,10 @@ async function page() {
   const data: simpleProductCard[] = await getData();
 
   return (
-    <div>
+    <div className="mt-5">
+      <StitchedTitle title="Esto es todo lo que amamos hacer ❤️"/>
 
-      <div className="bg-black rounded-md max-w-[90%] mx-auto my-4 p-[0.3rem]">
-        <div className="border-dashed border-[#8fffc7] border-2 box-content">
-          <h1 className="font-bold relative py-1 text-xl text-center text-white">
-            Todo lo que amamos hacer 🤍
-          </h1>{" "}
-        </div>
-      </div>
-
-      <div className="max-w-[90%] mx-auto grid grid-cols-3 gap-8 max-md:grid-cols-1">
+      <div className="mt-5 grid grid-cols-3 gap-8 max-md:grid-cols-1">
         {data.map((product, index) => (
           <ProductCard
             key={index}
