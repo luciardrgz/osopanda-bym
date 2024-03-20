@@ -48,13 +48,13 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
               </a>
               <MobileNavbarPopover />
               <a
-                href="#"
+                href="/faq"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
               >
                 Preguntas frecuentes
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkgreen hover:bg-darkgreen hover:text-white"
               >
                 Contacto

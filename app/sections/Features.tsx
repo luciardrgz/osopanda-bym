@@ -14,7 +14,7 @@ const Features = () => {
         <Feature
           title="Hacemos envíos a todo el país"
           description="oSoPanda llega a todos lados! Desde Jujuy hasta Tierra del Fuego y desde Buenos Aires hasta Mendoza. 🧳"
-          image="https://lh3.googleusercontent.com/proxy/4LoVbNpQB3cGWAeCcTKblhfgFwby_YQHpjdOyMZoRLB3Z_Is_4fc8ISUK5rmW_9PSh09StW9TOfIS4PPmPI3oxKtJ68ad5tTXLP5esv6FgIzbbjQwV4AQ_zPF-ipTE5bj7M"
+          image="https://media.tenor.com/RJtECFnSF00AAAAM/panda-slide.gif"
           isLastFeature={false}
         />
         <Feature

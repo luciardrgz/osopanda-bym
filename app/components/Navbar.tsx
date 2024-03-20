@@ -27,7 +27,7 @@ function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-darkgreen"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -44,13 +44,13 @@ function Header() {
           </a>
           <NavbarPopover />
           <a
-            href="#"
+            href="/faq"
             className="text-sm font-semibold leading-6 text-[#62bb8e] hover:text-darkgreen transition duration-300"
           >
             Preguntas frecuentes
           </a>
           <a
-            href="#"
+            href="/contact"
             className="text-sm font-semibold leading-6 text-[#62bb8e] hover:text-darkgreen transition duration-300"
           >
             Contacto

@@ -179,6 +179,7 @@ body {
 
 .card:hover:before {
   clip-path: circle(300px at 80% -20%);
+  background: #8fffc7;
 }
 
 .card:after {
@@ -226,14 +227,6 @@ body {
 
 .card:hover .contentBx {
   height: 210px;
-}
-
-.card .contentBx h2 {
-  position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
-  margin: 0;
 }
 
 .card .contentBx .color {
@@ -305,4 +298,97 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.faq .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion-item > button[aria-expanded="true"] {
+  border-bottom: 1px solid #72e6a6;
+}
+.accordion-item > button {
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+}
+.accordion-item > button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion-item > button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion-item > button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: #3a7869;
+}
+.accordion-item > button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: #3a7869;
+}
+.accordion-item > button[aria-expanded="true"] {
+  color: #3a7869;
+}
+.accordion-item > button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.accordion-item > button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.socials li a {
+  text-decoration: none;
+  width:210px;
+  height:80px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+.socials li a:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.socials li a:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.socials li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
 }
