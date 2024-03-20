@@ -39,3 +39,5 @@ next-env.d.ts
 sanity.ts
 sanity.cli.ts
 sanity.config.ts
+
+.vercel
