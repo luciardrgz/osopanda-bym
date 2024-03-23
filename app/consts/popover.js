@@ -7,29 +7,29 @@ import {
   ListBulletIcon,
 } from "@heroicons/react/20/solid";
 
-export const products = [
+export const menuProducts = [
   {
     name: "Bolsos",
     description: "Playeros, materos, etc.",
-    href: "#",
+    href: "/categories/bolsos",
     icon: ShoppingBagIcon,
   },
   {
     name: "Mochilas",
     description: "Para la escuela, el trabajo, etc.",
-    href: "#",
+    href: "/categories/mochilas",
     icon: SparklesIcon,
   },
   {
     name: "Accesorios para el día a día",
     description: "Portalentes, portaauriculares, etc.",
-    href: "#",
+    href: "/categories/accesorios",
     icon: HeartIcon,
   },
   {
     name: "Verano",
     description: "Lonas, bolsillos para reposeras, etc..",
-    href: "#",
+    href: "/categories/accesorios",
     icon: SunIcon,
   },
 ];
