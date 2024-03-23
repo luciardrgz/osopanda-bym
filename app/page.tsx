@@ -1,4 +1,3 @@
-
 import { simpleProductCard } from "./lib/interface";
 import { client } from "./lib/sanity";
 import Hero from "./sections/Hero";
@@ -10,10 +9,15 @@ export const revalidate = 30;
 async function getData() {
   const query = `*[_type == "product"] | order(_createdAt desc) {
     productName,
-      productPrice,
-      productSmallDescription,
-      "productSlug": productSlug.current,
-      productImage
+    productPrice,
+    productSmallDescription,
+    "productSlug": productSlug.current,
+    productImage,
+    "productFabricPrints": productFabricPrints[]->{
+      fabricPrintName,
+      fabricPrintSlug,
+      "fabricPrintImg": fabricPrintImg.asset->url
+    }
   }`;
 
   const data = await client.fetch(query);
