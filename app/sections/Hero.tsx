@@ -56,9 +56,8 @@ const Hero: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <div className="hero h-[87vh] mt-2 flex justify-center items-center">
-
-      <div className="p-6 h-[60vh] bg-[#d7f8e7] rounded-md max-md:mx-auto">
+    <div className="h-full mt-2 grid grid-cols-2 max-md:grid-cols-1">
+      <div className="my-auto p-6 h-[60vh] max-md:h-[50vh] bg-[#8fffc7] rounded-md max-md:mx-auto">
         <span className="text-lg uppercase text-darkgreen">Esto es</span>
         <h1 className="title-gradient text-7xl max-sm:text-5xl font-extrabold tracking-tighter">
           oSoPanda
@@ -72,14 +71,14 @@ const Hero: React.FC<Props> = ({ data }) => {
         </p>
       </div>
 
-      <div className="swiper w-full h-[80vh] max-md:mx-auto">
+      <div className="swiper w-full h-[85vh] max-md:h-[50vh] max-md:mx-auto">
         <div className="swiper-wrapper">
           {data.map((product, index) => (
             <SwiperCard
               key={index}
               title={product.productName}
               paragraph={product.productSmallDescription}
-              url="https://en.wikipedia.org/wiki/Jellyfish"
+              url={`/products/${product.productSlug}`}
               backgroundImageUrl={urlFor(product.productImage).url()}
             />
           ))}

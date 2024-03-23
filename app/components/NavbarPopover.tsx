@@ -1,5 +1,5 @@
 import React from "react";
-import { products, callsToAction } from "../consts/products";
+import { menuProducts, callsToAction } from "../consts/popover";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
@@ -26,7 +26,7 @@ const NavbarPopover = () => {
       >
         <Popover.Panel className="absolute bg-mediumgreen -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl shadow-lg ring-1 ring-gray-900/5">
           <div>
-            {products.map((item) => (
+            {menuProducts.map((item) => (
               <div
                 key={item.name}
                 className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-[#8fffc7]"

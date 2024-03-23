@@ -10,7 +10,7 @@ interface Props {
 const LastProducts: React.FC<Props> = ({ data }) => {
   return (
     <>
-      <StitchedTitle title="Lo último!" />
+      <StitchedTitle title="¡Lo último!" />
       <div className="grid justify-center sm:grid-cols-1 md:grid-cols-3 gap-2">
         <LastProductCard data={data} />
       </div>

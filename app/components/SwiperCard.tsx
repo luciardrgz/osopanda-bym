@@ -13,7 +13,7 @@ const SwiperCard = ({
 }) => {
   return (
     <div
-      className="relative swiper-slide w-[18.75rem] h-[28.125rem] max-sm:w-full max-sm:h-full flex flex-col justify-end items-start"
+      className="swiper-slide w-full h-full"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundRepeat: "no-repeat",

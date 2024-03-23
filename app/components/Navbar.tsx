@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import {  useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
-import { Popover, Transition } from "@headlessui/react";
+import { Popover} from "@headlessui/react";
 import MobileNavbar from "./MobileNavbar";
 import NavbarPopover from "./NavbarPopover";
 

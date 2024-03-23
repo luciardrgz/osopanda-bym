@@ -26,28 +26,28 @@ const page = () => {
           <li>
             <a
               href="https://www.facebook.com/osopanda.bym"
-              className="flex flex-col justify-center items-center bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
+              className="flex flex-col justify-center items-center rounded-xl bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
             >
               <FontAwesomeIcon icon={faFacebook} className="w-10" />
-              <p>Facebook</p>
+              <p>Seguinos en Facebook</p>
             </a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/osopanda.bym/"
-              className="flex flex-col justify-center items-center bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
+              className="flex flex-col justify-center items-center rounded-xl bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
             >
               <FontAwesomeIcon icon={faInstagram} className="w-10" />
-              <p>Instagram</p>
+              <p>Seguinos en Instagram</p>
             </a>
           </li>
           <li>
             <a
               href="https://api.whatsapp.com/send/?phone=2235800068&text=Hola%21+Escribo+desde+la+web+de+oSoPanda"
-              className="flex flex-col justify-center items-center bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
+              className="flex flex-col justify-center items-center rounded-xl bg-darkgreen text-white hover:bg-[#8fffc7] hover:text-darkgreen hover:font-bold"
             >
               <FontAwesomeIcon icon={faWhatsapp} className="w-10" />
-              <p>WhatsApp</p>
+              <p>Mandanos un WhatsApp</p>
             </a>
           </li>
         </ul>

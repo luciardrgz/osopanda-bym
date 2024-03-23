@@ -1,9 +1,8 @@
 import React from 'react'
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { cn } from "@/lib/utils";
-import { products, callsToAction } from "../consts/products";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-
+import { menuProducts, callsToAction } from "../consts/popover";
+import { Disclosure } from "@headlessui/react";
 
 const MobileNavbarPopover = () => {
   return (
@@ -21,7 +20,7 @@ const MobileNavbarPopover = () => {
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="mt-2 space-y-2">
-                      {[...products, ...callsToAction].map((item) => (
+                      {[...menuProducts, ...callsToAction].map((item) => (
                         <Disclosure.Button
                           key={item.name}
                           as="a"

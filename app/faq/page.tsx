@@ -5,7 +5,7 @@ import StitchedTitle from "../components/StitchedTitle";
 const Page = () => {
   return (
     <div className="mt-5">
-      <StitchedTitle title="Sacate las dudas!" />
+      <StitchedTitle title="¡Sacate las dudas!" />
       <div className="mt-5 flex flex-col gap-4">
         <FAQCard
           question="¿Cuáles son sus días y horarios de atención?"
@@ -29,7 +29,7 @@ const Page = () => {
         />
       </div>
       <div className="mt-5 flex flex-col">
-        <StitchedTitle title="Tenés otra consulta?" />
+        <StitchedTitle title="¿Tenés otra consulta?" />
         <a href="/contact">
           <img
             src="/click-contacto.png"
