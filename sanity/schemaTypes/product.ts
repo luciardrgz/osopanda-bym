@@ -1,7 +1,7 @@
 export default {
   name: 'product',
   type: 'document',
-  title: 'Product',
+  title: 'Producto',
   fields: [
     {
       name: 'productName',
@@ -12,6 +12,12 @@ export default {
       name: 'productPrice',
       type: 'number',
       title: 'Precio',
+    },
+    {
+      name: 'productCategory',
+      type: 'reference',
+      title: 'Categoría',
+      to: [{type: 'category'}],
     },
     {
       name: 'productSlug',
@@ -25,6 +31,17 @@ export default {
       name: 'productImage',
       type: 'image',
       title: 'Imagen',
+    },
+    {
+      name: 'productFabricPrints',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'fabricPrint'}],
+        },
+      ],
+      title: 'Estampados',
     },
     {
       name: 'productSmallDescription',

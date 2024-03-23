@@ -1,15 +1,16 @@
 export interface simpleProductCard {
     productName: string;
     productPrice: number;
+    productCategory: string;
     productSmallDescription: string;
-    productSlug: string;
-    productImage: any;
-}
-
-export interface product {
-    productName: string;
-    productPrice: number;
     productLongDescription: any;
     productSlug: string;
     productImage: any;
+    productFabricPrints: FabricPrint[];
+}
+
+export interface FabricPrint {
+    fabricPrintName: string;
+    fabricPrintSlug: string;
+    fabricPrintImg: any;
 }
